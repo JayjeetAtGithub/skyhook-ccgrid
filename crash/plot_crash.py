@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     df['Time'] = timestamp
     df['Throughput'] = th
-    sns_plot = sns.lineplot(data=df, x="Time", y="Throughput", color='black', linewidth=3)
+    sns_plot = sns.lineplot(data=df, x="Time", y="Throughput", color='black', linewidth=3, linestyle='-.')
     sns_plot.set(ylim=(0, 1050))
     sns_plot.set_ylabel('Throughput (MBps)', fontsize=32)
     sns_plot.set_xlabel('Timestamp (s)', fontsize=32)
