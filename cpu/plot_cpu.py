@@ -34,8 +34,8 @@ if __name__ == "__main__":
     sns_plot.set(xlim=(10, 325))
 
     sns_plot.set_title("With Skyhook", fontdict= { 'fontsize': 26})
-    sns_plot.set_ylabel('Usage (%)', fontsize=22)
-    sns_plot.set_xlabel('Timestamp (s)', fontsize=22)
+    sns_plot.set_ylabel('Usage (%)', fontsize=24)
+    sns_plot.set_xlabel('Timestamp (s)', fontsize=24)
     sns_plot.tick_params(axis="y", labelsize=24)
     sns_plot.tick_params(axis="x", labelsize=22)
 
@@ -59,8 +59,8 @@ if __name__ == "__main__":
         sns_plot.set(xlim=(10, 325))
 
         sns_plot.set_title("With Skyhook", fontdict= { 'fontsize': 26})
-        sns_plot.set_ylabel('Usage (%)', fontsize=22)
-        sns_plot.set_xlabel('Timestamp (s)', fontsize=22)
+        sns_plot.set_ylabel('Usage (%)', fontsize=24)
+        sns_plot.set_xlabel('Timestamp (s)', fontsize=24)
         sns_plot.tick_params(axis="y", labelsize=24)
         sns_plot.tick_params(axis="x", labelsize=22)
     
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     sns_plot.set(xlim=(10, 350))
 
     sns_plot.set_title("Without Skyhook", fontdict= { 'fontsize': 26})
-    sns_plot.set_ylabel('Usage (%)', fontsize=22)
-    sns_plot.set_xlabel('Timestamp (s)', fontsize=22)
+    sns_plot.set_ylabel('Usage (%)', fontsize=24)
+    sns_plot.set_xlabel('Timestamp (s)', fontsize=24)
     sns_plot.tick_params(axis="y", labelsize=24)
     sns_plot.tick_params(axis="x", labelsize=22)
 
@@ -103,8 +103,8 @@ if __name__ == "__main__":
         sns_plot.set(xlim=(10, 350))
 
         sns_plot.set_title("Without Skyhook", fontdict= { 'fontsize': 26})
-        sns_plot.set_ylabel('Usage (%)', fontsize=22)
-        sns_plot.set_xlabel('Timestamp (s)', fontsize=22)
+        sns_plot.set_ylabel('Usage (%)', fontsize=24)
+        sns_plot.set_xlabel('Timestamp (s)', fontsize=24)
         sns_plot.tick_params(axis="y", labelsize=24)
         sns_plot.tick_params(axis="x", labelsize=22)
 
