@@ -3,8 +3,7 @@ import seaborn as sns
 import pandas as pd
 
 if __name__ == "__main__":
-    sns.set_style("whitegrid")
-    fig, axs = plt.subplots(1, 3, figsize=(16, 3.5), gridspec_kw={'hspace': 0.0, 'wspace': 0.1})
+    fig, axs = plt.subplots(1, 3, figsize=(16, 3.5), gridspec_kw={'hspace': 0.0, 'wspace': 0.08}, sharey=True)
     # sns.despine(top=True, right=True)
     sns.set_palette('Set2', n_colors=2)
 
@@ -38,6 +37,8 @@ if __name__ == "__main__":
     df = pd.DataFrame.from_dict(data)
     print(df)
 
+    axs[0].set_axisbelow(True)
+    axs[0].yaxis.grid(True)
     plot_4nodes = sns.barplot(x="Selectivity", y="Time (s)", capsize=.20, edgecolor="black", linewidth=0.4, errwidth=0.7, hue="Format", data=df, ax=axs[0])
     plot_4nodes.set_title("4 Nodes", fontdict= { 'fontsize': 14})
     plot_4nodes.set_xlabel('Selectivity (%)', fontsize=14)
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     plot_4nodes.set(ylim=(0, 60))
     plot_4nodes.tick_params(axis="y", labelsize=14)
     plot_4nodes.tick_params(axis="x", labelsize=14)
-
+    # plot_4nodes.grid(axis='y')
     axs[0].legend([],[], frameon=False)
 
     # 8 nodes
@@ -78,6 +79,8 @@ if __name__ == "__main__":
     df = pd.DataFrame.from_dict(data)
     print(df)
 
+    axs[1].set_axisbelow(True)
+    axs[1].yaxis.grid(True)
     plot_8nodes = sns.barplot(x="Selectivity", y="Time (s)", capsize=.20, edgecolor="black", linewidth=0.4, errwidth=0.7, hue="Format", data=df, ax=axs[1])
     plot_8nodes.set_title("8 Nodes", fontdict= { 'fontsize': 14})
     plot_8nodes.set_xlabel('Selectivity (%)', fontsize=14)
@@ -85,7 +88,7 @@ if __name__ == "__main__":
     plot_8nodes.set(ylim=(0, 60))
     plot_8nodes.tick_params(axis="y", labelsize=14)
     plot_8nodes.tick_params(axis="x", labelsize=14)
-
+    # plot_8nodes.grid(axis='y')
     axs[1].legend([],[], frameon=False)
 
     # 14 nodes
@@ -118,6 +121,8 @@ if __name__ == "__main__":
     df = pd.DataFrame.from_dict(data)
     print(df)
 
+    axs[2].set_axisbelow(True)
+    axs[2].yaxis.grid(True)
     plot_16nodes = sns.barplot(x="Selectivity", y="Time (s)", hue="Format", capsize=.20, edgecolor="black", linewidth=0.4, errwidth=0.7, data=df, ax=axs[2])
     plot_16nodes.set_title("16 Nodes", fontdict= { 'fontsize': 14})
     plot_16nodes.set_xlabel('Selectivity (%)', fontsize=14)
@@ -125,7 +130,7 @@ if __name__ == "__main__":
     plot_16nodes.set(ylim=(0, 60))
     plot_16nodes.tick_params(axis="y", labelsize=14)
     plot_16nodes.tick_params(axis="x", labelsize=14)
-
+    # plot_16nodes.grid(axis='y')
     axs[2].legend([],[], frameon=False)
 
     plotaxs = fig.axes[2]
