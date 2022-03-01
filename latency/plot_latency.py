@@ -140,4 +140,4 @@ if __name__ == "__main__":
     # fig.legend(lines, labels, loc='upper right', fontsize=14, frameon=True)
     fig.legend(lines, labels, loc='center', bbox_to_anchor=(0.5, -0.10), fontsize=14, frameon=True, ncol=2)
     fig.tight_layout()
-    fig.savefig('latency_color.pdf', bbox_inches='tight')
+    fig.savefig('latency.pdf', bbox_inches='tight')
