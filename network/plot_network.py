@@ -50,6 +50,7 @@ if __name__ == "__main__":
     sns_plot_2.set_xlabel('Timestamp (s)', fontsize=18)
     sns_plot_2.tick_params(axis="y", labelsize=18)
     sns_plot_2.tick_params(axis="x", labelsize=18)
+    sns_plot_2.grid(axis='y')
 
     plt.legend(['Without Skyhook', 'With Skyhook'])
     plt.savefig('network.pdf', dpi=800, bbox_inches='tight')
