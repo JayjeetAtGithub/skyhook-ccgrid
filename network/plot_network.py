@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     pq['Time'] = timestamp
     pq['Throughput'] = th
-    sns_plot_1 = sns.lineplot(data=pq, x="Time", y="Throughput", linestyle="dashed")
+    sns_plot_1 = sns.lineplot(data=pq, x="Time", y="Throughput")
     # sns_plot_1.set(ylim=(0, 100))
     sns_plot_1.set_ylabel('Throughput (MBps)', fontsize=18)
     sns_plot_1.set_xlabel('Timestamp (s)', fontsize=18)
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     sk['Time'] = timestamp
     sk['Throughput'] = th
 
-    sns_plot_2 = sns.lineplot(data=sk, x="Time", y="Throughput", linestyle="dashed")
+    sns_plot_2 = sns.lineplot(data=sk, x="Time", y="Throughput")
     # sns_plot_2.set(ylim=(0, 100))
     sns_plot_2.set_ylabel('Throughput (MBps)', fontsize=18)
     sns_plot_2.set_xlabel('Timestamp (s)', fontsize=18)
@@ -52,4 +52,4 @@ if __name__ == "__main__":
     sns_plot_2.tick_params(axis="x", labelsize=18)
 
     plt.legend(['Without Skyhook', 'With Skyhook'])
-    plt.savefig('network.png', dpi=800, bbox_inches='tight')
+    plt.savefig('network.pdf', dpi=800, bbox_inches='tight')
