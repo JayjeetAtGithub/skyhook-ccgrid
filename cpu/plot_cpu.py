@@ -31,7 +31,6 @@ if __name__ == "__main__":
     df_skyhook_client['Time'] = timestamp
     sns_plot = sns.lineplot(data=df_skyhook_client, x="Time", y="Usage", ax=axs[1], linewidth=5, linestyle='-.')
     sns_plot.set(ylim=(0, 100))
-    sns_plot.set(xlim=(10, 325))
 
     sns_plot.set_title("With Skyhook", fontdict= { 'fontsize': 26})
     sns_plot.set_ylabel('Usage (%)', fontsize=24)
@@ -56,7 +55,6 @@ if __name__ == "__main__":
         df_skyhook_storage['Time'] = timestamp
         sns_plot = sns.lineplot(data=df_skyhook_storage, x="Time", y="node{}".format(i), linewidth=2, ax=axs[1], linestyle='--')
         sns_plot.set(ylim=(0, 160))
-        sns_plot.set(xlim=(10, 325))
 
         sns_plot.set_title("With Skyhook", fontdict= { 'fontsize': 26})
         sns_plot.set_ylabel('Usage (%)', fontsize=24)
@@ -78,7 +76,6 @@ if __name__ == "__main__":
 
     sns_plot = sns.lineplot(data=df_wskyhook_client, x="Time", y="Usage", ax=axs[0], linewidth=5, linestyle='-.')
     sns_plot.set(ylim=(0, 100))
-    sns_plot.set(xlim=(10, 350))
 
     sns_plot.set_title("Without Skyhook", fontdict= { 'fontsize': 26})
     sns_plot.set_ylabel('Usage (%)', fontsize=24)
@@ -100,7 +97,6 @@ if __name__ == "__main__":
         df_wskyhook_storage['Time'] = timestamp
         sns_plot = sns.lineplot(data=df_wskyhook_storage, x="Time", y="node{}".format(i), linewidth=2, ax=axs[0], linestyle='--')
         sns_plot.set(ylim=(0, 160))
-        sns_plot.set(xlim=(10, 350))
 
         sns_plot.set_title("Without Skyhook", fontdict= { 'fontsize': 26})
         sns_plot.set_ylabel('Usage (%)', fontsize=24)
