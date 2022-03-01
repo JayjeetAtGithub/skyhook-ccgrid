@@ -23,9 +23,9 @@ if __name__ == "__main__":
     df['Throughput'] = th
     sns_plot = sns.lineplot(data=df, x="Time", y="Throughput", color='black', linewidth=3)
     sns_plot.set(ylim=(0, 1050))
-    sns_plot.set_ylabel('Throughput (MBps)', fontsize=32)
-    sns_plot.set_xlabel('Timestamp (s)', fontsize=32)
-    sns_plot.tick_params(axis="y", labelsize=32)
-    sns_plot.tick_params(axis="x", labelsize=32)
+    sns_plot.set_ylabel('Throughput (MBps)', fontsize=38)
+    sns_plot.set_xlabel('Timestamp (s)', fontsize=38)
+    sns_plot.tick_params(axis="y", labelsize=36)
+    sns_plot.tick_params(axis="x", labelsize=36)
     sns_plot.grid(axis='y')
     plt.savefig('crash.pdf', bbox_inches='tight')
