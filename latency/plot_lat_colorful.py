@@ -5,7 +5,7 @@ import pandas as pd
 if __name__ == "__main__":
     fig, axs = plt.subplots(1, 3, figsize=(16, 3.5), gridspec_kw={'hspace': 0.0, 'wspace': 0.08}, sharey=True)
     # sns.despine(top=True, right=True)
-    sns.set_palette('Set2', n_colors=2)
+    sns.set_palette('Greys', n_colors=2)
 
     # 4 nodes
     df_pq = pd.read_json("4nodes/8_pq.json")
